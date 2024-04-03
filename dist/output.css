@@ -739,9 +739,16 @@ html {
   clear: none;
 }
 
-.my-4{
-  margin-top: 1rem;
+.mb-4{
   margin-bottom: 1rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.mr-1{
+  margin-right: 0.25rem;
 }
 
 .mr-2{
@@ -758,6 +765,10 @@ html {
 
 .mt-3{
   margin-top: 0.75rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
 }
 
 .box-border{
@@ -897,14 +908,6 @@ html {
 
 .w-full{
   width: 100%;
-}
-
-.max-w-lg{
-  max-width: 32rem;
-}
-
-.max-w-sm{
-  max-width: 24rem;
 }
 
 .flex-1{
@@ -1823,6 +1826,10 @@ html {
   border-width: 1px;
 }
 
+.border-2{
+  border-width: 2px;
+}
+
 .border-x{
   border-left-width: 1px;
   border-right-width: 1px;
@@ -2016,11 +2023,6 @@ html {
   padding: 3rem;
 }
 
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2046,8 +2048,33 @@ html {
   padding-bottom: 1rem;
 }
 
-.pb-8{
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-8{
+  padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
 }
 
 .pt-40{
@@ -2110,14 +2137,14 @@ html {
   vertical-align: super;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-lg{
@@ -2203,6 +2230,10 @@ html {
 
 .text-darkgray{
   color: var(--color-darkgray);
+}
+
+.text-gray{
+  color: var(--color-gray);
 }
 
 .text-white{
@@ -2574,16 +2605,24 @@ html {
   }
 }
 
-.hover\:border-white:hover{
-  border-color: var(--color-white);
+.hover\:border-gray:hover{
+  border-color: var(--color-gray);
 }
 
 .hover\:bg-darkgray:hover{
   background-color: var(--color-darkgray);
 }
 
+.hover\:bg-green:hover{
+  background-color: var(--color-green);
+}
+
 .hover\:font-bold:hover{
   font-weight: 700;
+}
+
+.hover\:text-darkgray:hover{
+  color: var(--color-darkgray);
 }
 
 .hover\:text-green:hover{
@@ -2635,5 +2674,3 @@ html {
     }
   }
 }
-
-
