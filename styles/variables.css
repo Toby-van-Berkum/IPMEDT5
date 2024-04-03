@@ -15,3 +15,13 @@
   --color-orange: #DC5227;
   --color-blue: #5E5CC7;
 }
+
+::-moz-selection {
+  color: var(--color-darkgray);
+  background: var(--color-green);
+}
+
+::selection {
+  color: var(--color-darkgray);
+  background: var(--color-green);
+}

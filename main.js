@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   for (var i = 0; i < toggleButtons.length; i++) {
     toggleButtons[i].addEventListener('click', function () {
-      console.log("test");
+      console.log("click");
     });
   }
 });
-
