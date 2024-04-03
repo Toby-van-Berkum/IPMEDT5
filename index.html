@@ -8,10 +8,70 @@
   <link rel="stylesheet" href="/dist/output.css">
 </head>
 
-<body class="bg-black text-white font-inter">
-  <main class="container">
-    <h1 class="">Happy plants</h1>
+<body class="flex h-screen text-white bg-black bg-gray-100 font-inter">
+  <!-- sidebar -->
+  <aside class="flex-col hidden w-64 bg-darkgray md:flex">
+    <div class="flex items-center justify-center h-16 bg-gray-900">
+      <span class="font-bold text-white">Happy Plants</span>
+    </div>
+    <div class="flex flex-col flex-1 overflow-y-auto">
+      <nav class="flex-1 px-2 py-4 bg-gray-800">
+        <a href="#" class="flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          Dashboard
+        </a>
+        <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          Messages
+        </a>
+        <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          Settings
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="flex flex-col flex-1 p-12 overflow-y-auto">
+    <h1 class="text-2xl font-bold">Jouw planten</h1>
+    <p class="mt-2 text-gray-600">This is an example dashboard using Tailwind CSS.</p>
+
+    <!-- button toggle -->
+    <div id="toggle-buttons-container">
+      <button class="px-6 py-2 mr-3 hover:text-green bg-darkgray" aria-pressed="false">
+        Woonkamer
+      </button>
+      <button class="px-6 py-2 mr-3 hover:text-green bg-darkgray" aria-pressed="false">
+        Badkamer
+      </button>
+      <button class="px-6 py-2 mr-3 hover:text-green bg-darkgray" aria-pressed="false">
+        Slaapkamer
+      </button>
+      <button class="px-6 py-2 hover:text-green bg-darkgray" aria-pressed="false">
+        Voeg kamer toe
+      </button>
+    </div>
+    <!-- alertbox -->
+    <div class="flex items-center justify-center max-w-lg px-6 py-4 mx-auto my-4 text-lg rounded-md bg-darkgray">
+      <svg viewBox="0 0 24 24" class="w-6 h-6 mr-3 text-yellow-600 sm:w-5 sm:h-5">
+        <path fill="var(--color-orange)"
+          d="M23.119,20,13.772,2.15h0a2,2,0,0,0-3.543,0L.881,20a2,2,0,0,0,1.772,2.928H21.347A2,2,0,0,0,23.119,20ZM11,8.423a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Zm1.05,11.51h-.028a1.528,1.528,0,0,1-1.522-1.47,1.476,1.476,0,0,1,1.448-1.53h.028A1.527,1.527,0,0,1,13.5,18.4,1.475,1.475,0,0,1,12.05,19.933Z">
+        </path>
+      </svg>
+      Het waterreservoir van plant 3 is bijna leeg
+    </div>
   </main>
+  <script src="main.js"></script>
 </body>
 
 </html>
