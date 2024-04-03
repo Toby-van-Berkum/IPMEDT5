@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  var toggleButton = document.getElementById("toggle-buttons-container").children;
-  toggleButton.addEventListener('click', function () {
-    console.log("test");
-  });
+  var toggleButtons = document.getElementById("toggle-buttons-container").children;
+  console.log(toggleButtons[0]);
+
+  for (var i = 0; i < toggleButtons.length; i++) {
+    toggleButtons[i].addEventListener('click', function () {
+      console.log("test");
+    });
+  }
 });
 
