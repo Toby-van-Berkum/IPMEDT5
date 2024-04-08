@@ -604,6 +604,44 @@ html {
   }
 }
 
+.btn-primary{
+  margin: auto;
+  border-radius: 0.125rem;
+  border-width: 2px;
+  border-color: var(--color-green);
+  background-color: var(--color-green);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--color-darkgray);
+}
+
+.btn-primary:hover{
+  border-color: var(--color-green);
+  background-color: var(--color-darkgray);
+  color: var(--color-white);
+}
+
+.btn-alert{
+  margin: auto;
+  border-radius: 0.125rem;
+  border-width: 2px;
+  border-color: var(--color-orange);
+  background-color: var(--color-orange);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--color-darkgray);
+}
+
+.btn-alert:hover{
+  border-color: var(--color-orange);
+  background-color: var(--color-darkgray);
+  color: var(--color-white);
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -739,12 +777,21 @@ html {
   clear: none;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
 
 .mb-8{
   margin-bottom: 2rem;
+}
+
+.ml-auto{
+  margin-left: auto;
 }
 
 .mr-1{
@@ -757,6 +804,10 @@ html {
 
 .mr-3{
   margin-right: 0.75rem;
+}
+
+.mr-auto{
+  margin-right: auto;
 }
 
 .mt-2{
@@ -773,6 +824,14 @@ html {
 
 .mt-8{
   margin-top: 2rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
 }
 
 .box-border{
@@ -878,6 +937,10 @@ html {
   height: 4rem;
 }
 
+.h-32{
+  height: 8rem;
+}
+
 .h-6{
   height: 1.5rem;
 }
@@ -886,12 +949,24 @@ html {
   height: 100%;
 }
 
+.h-px{
+  height: 1px;
+}
+
 .h-screen{
   height: 100vh;
 }
 
 .max-h-screen{
   max-height: 100vh;
+}
+
+.w-2{
+  width: 0.5rem;
+}
+
+.w-2\/4{
+  width: 50%;
 }
 
 .w-6{
@@ -924,6 +999,22 @@ html {
 
 .max-w-screen-md{
   max-width: 768px;
+}
+
+.w-10{
+  width: 2.5rem;
+}
+
+.w-12{
+  width: 3rem;
+}
+
+.w-\[5rem\]{
+  width: 5rem;
+}
+
+.w-\[4rem\]{
+  width: 4rem;
 }
 
 .flex-1{
@@ -1268,6 +1359,14 @@ html {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-5{
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-7{
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
 .flex-row{
   flex-direction: row;
 }
@@ -1456,10 +1555,20 @@ html {
   gap: 1rem;
 }
 
+.gap-6{
+  gap: 1.5rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -1772,6 +1881,10 @@ html {
   border-radius: 0.25rem;
 }
 
+.rounded-full{
+  border-radius: 9999px;
+}
+
 .rounded-sm{
   border-radius: 0.125rem;
 }
@@ -1812,6 +1925,10 @@ html {
 
 .rounded-br{
   border-bottom-right-radius: 0.25rem;
+}
+
+.rounded-br-\[15rem\]{
+  border-bottom-right-radius: 15rem;
 }
 
 .rounded-ee{
@@ -1913,8 +2030,16 @@ html {
   background-color: var(--color-black);
 }
 
+.bg-blue{
+  background-color: var(--color-blue);
+}
+
 .bg-darkgray{
   background-color: var(--color-darkgray);
+}
+
+.bg-gray{
+  background-color: var(--color-gray);
 }
 
 .bg-green{
@@ -2055,9 +2180,22 @@ html {
   padding: 2rem;
 }
 
+.p-1{
+  padding: 0.25rem;
+}
+
+.p-2{
+  padding: 0.5rem;
+}
+
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.px-16{
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .px-4{
@@ -2075,6 +2213,11 @@ html {
   padding-right: 2rem;
 }
 
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2088,6 +2231,14 @@ html {
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pb-0{
+  padding-bottom: 0px;
+}
+
+.pb-0\.5{
+  padding-bottom: 0.125rem;
 }
 
 .pb-4{
@@ -2152,6 +2303,11 @@ html {
 
 .align-super{
   vertical-align: super;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl{
@@ -2314,6 +2470,10 @@ html {
 .subpixel-antialiased{
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+}
+
+.caret-green{
+  caret-color: var(--color-green);
 }
 
 .bg-blend-normal{
@@ -2597,6 +2757,53 @@ html {
 
 .forced-color-adjust-none{
   forced-color-adjust: none;
+}
+
+/* Define the size */
+
+.svg-indicator {
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* 
+ * Add the center and the radius using the size 
+ * and `stroke-width` values.
+ */
+
+.svg-indicator-track,
+.svg-indicator-indication {
+  cx: 50px;
+  cy: 50px;
+  r: 40px;
+  fill: transparent;
+  stroke-width: 10px;
+}
+
+/* Some color to highlight the rings */
+
+.svg-indicator-track {
+  stroke: var(--color-blue);
+}
+
+.svg-indicator-indication {
+  stroke: var(--color-darkgray);
+  stroke-dasharray: 251.2px;
+  stroke-dashoffset: 188.4px;
+}
+
+article {
+  margin-bottom: 2.5rem;
+}
+
+article:last-of-type {
+  margin-bottom: 0;
+}
+
+h5 {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 640px){
