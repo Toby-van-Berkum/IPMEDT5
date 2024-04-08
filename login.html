@@ -8,21 +8,24 @@
   <link rel="stylesheet" href="/dist/output.css">
 </head>
 
-<body class="flex h-screen text-white bg-black bg-gray-100 font-inter">
-  <main class="flex items-center justify-start">
-    <figure class="h-screen mr-auto">
-      <img src="/img/plant-3.avif" alt="A plant" class="object-contain h-full rounded-br-[15rem]">
+<body class="flex flex-col md:flex-row h-screen text-white font-inter bg-[url(/img/plant-3.avif)] bg-no-repeat bg-cover bg-center bg-fixed md:bg-black">
+  <aside class="max-h-screen hidden lg:block lg:bg-fixed">
+    <figure class="h-full">
+      <img src="/img/plant-3.avif" alt="A plant" class="object-contain h-full md:rounded-br-[15rem]">
     </figure>
-    <div class="flex flex-col gap-5 justify-start">
+  </aside>
+  <main class="flex flex-col md:flex-row">
+    <section class="flex flex-col justify-center items-center w-full p-8 bg-black bg-opacity-90">
       <span>
-    <h2 class="text-3xl px-16">Welkom bij</h2>
-    <h1>
-      <span class="text-4xl font-bold">Happy </span><span class="text-4xl text-green font-bold">Plants</span>
-    </h1>
-    </span>
-    <button type="button" class="bg-green rounded text-black font-bold px-4 py-1 text-2xl">Login</button></div>
+        <h2 class="text-3xl lg:text-2xl">Welkom bij</h2>
+        <h1 class="text-4xl lg:text-7xl font-bold">
+          <span class="text-green">Happy </span><span class="text-green">Plants</span>
+        </h1>
+      </span>
+      <button class="bg-green rounded text-black font-bold px-4 py-2 text-xl mt-8" onclick="location.href='/index.html'">Login</button>
+      <a href="/index.html" class="text-lg lg:text-xl mt-4">Nog geen account? <span class="text-green">Maak een account</span></a>
+    </section>
   </main>
-  <!-- <script src="main.js"></script> -->
 </body>
 
 </html>
