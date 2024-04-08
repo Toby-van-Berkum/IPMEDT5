@@ -806,10 +806,6 @@ html {
   margin-right: 0.75rem;
 }
 
-.mr-auto{
-  margin-right: auto;
-}
-
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -824,14 +820,6 @@ html {
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.mt-4{
-  margin-top: 1rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
 }
 
 .box-border{
@@ -965,16 +953,16 @@ html {
   width: 0.5rem;
 }
 
-.w-2\/4{
-  width: 50%;
-}
-
 .w-6{
   width: 1.5rem;
 }
 
 .w-64{
   width: 16rem;
+}
+
+.w-\[4rem\]{
+  width: 4rem;
 }
 
 .w-\[this-is\\\\\]{
@@ -993,28 +981,8 @@ html {
   width: 100%;
 }
 
-.w-screen{
-  width: 100vw;
-}
-
-.max-w-screen-md{
-  max-width: 768px;
-}
-
-.w-10{
-  width: 2.5rem;
-}
-
-.w-12{
-  width: 3rem;
-}
-
-.w-\[5rem\]{
-  width: 5rem;
-}
-
-.w-\[4rem\]{
-  width: 4rem;
+.max-w-96{
+  max-width: 24rem;
 }
 
 .flex-1{
@@ -1357,10 +1325,6 @@ html {
 
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-5{
-  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .grid-cols-7{
@@ -1927,10 +1891,6 @@ html {
   border-bottom-right-radius: 0.25rem;
 }
 
-.rounded-br-\[15rem\]{
-  border-bottom-right-radius: 15rem;
-}
-
 .rounded-ee{
   border-end-end-radius: 0.25rem;
 }
@@ -2046,16 +2006,16 @@ html {
   background-color: var(--color-green);
 }
 
-.bg-opacity-10{
-  --tw-bg-opacity: 0.1;
-}
-
-.bg-gradient-to-t{
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+.bg-opacity-90{
+  --tw-bg-opacity: 0.9;
 }
 
 .bg-\[url\(\/img\/plant-3\.avif\)\]{
   background-image: url(/img/plant-3.avif);
+}
+
+.bg-gradient-to-t{
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
 .decoration-slice{
@@ -2176,26 +2136,17 @@ html {
      object-fit: scale-down;
 }
 
-.p-8{
-  padding: 2rem;
-}
-
-.p-1{
-  padding: 0.25rem;
-}
-
 .p-2{
   padding: 0.5rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
-}
-
-.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 .px-4{
@@ -2211,11 +2162,6 @@ html {
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .py-2{
@@ -2303,11 +2249,6 @@ html {
 
 .align-super{
   vertical-align: super;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl{
@@ -2470,10 +2411,6 @@ html {
 .subpixel-antialiased{
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-}
-
-.caret-green{
-  caret-color: var(--color-green);
 }
 
 .bg-blend-normal{
@@ -2876,6 +2813,25 @@ h5 {
   text-align: center;
 }
 
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-inset:focus{
+  --tw-ring-inset: inset;
+}
+
+.focus\:ring-green:focus{
+  --tw-ring-color: var(--color-green);
+}
+
 .focus\:hover\:text-center:hover:focus{
   text-align: center;
 }
@@ -2921,21 +2877,13 @@ h5 {
     display: block;
   }
 
-  .lg\:flex-row{
-    flex-direction: row;
-  }
-
-  .lg\:rounded-br-\[15rem\]{
-    border-bottom-right-radius: 15rem;
-  }
-
   .lg\:bg-fixed{
     background-attachment: fixed;
   }
 
-  .lg\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:text-7xl{
@@ -2946,11 +2894,6 @@ h5 {
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
