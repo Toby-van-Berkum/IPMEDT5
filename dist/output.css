@@ -771,6 +771,10 @@ html {
   margin-top: 2rem;
 }
 
+.mr-auto{
+  margin-right: auto;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1440,6 +1444,10 @@ html {
   gap: 1rem;
 }
 
+.gap-5{
+  gap: 1.25rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1822,6 +1830,10 @@ html {
   border-top-right-radius: 0.25rem;
 }
 
+.rounded-br-\[15rem\]{
+  border-bottom-right-radius: 15rem;
+}
+
 .border{
   border-width: 1px;
 }
@@ -2019,8 +2031,9 @@ html {
      object-fit: scale-down;
 }
 
-.p-12{
-  padding: 3rem;
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .px-4{
@@ -2048,29 +2061,19 @@ html {
   padding-bottom: 1rem;
 }
 
-.px-12{
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.px-16{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .pb-4{
@@ -2150,6 +2153,11 @@ html {
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold{
@@ -2238,6 +2246,14 @@ html {
 
 .text-white{
   color: var(--color-white);
+}
+
+.text-black{
+  color: var(--color-black);
+}
+
+.text-green{
+  color: var(--color-green);
 }
 
 .underline{
