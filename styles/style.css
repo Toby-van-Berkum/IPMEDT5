@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 m-auto border-2 border-green rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-white hover:border-green;
+  }
+  .btn-alert {
+    @apply px-6 py-2 m-auto border-2 border-orange rounded-sm bg-orange text-darkgray hover:bg-darkgray hover:text-white hover:border-orange;
+  }
+}
+
+
 /* Define the size */
 .svg-indicator {
   width: 100px;
@@ -34,4 +45,16 @@
   stroke: var(--color-darkgray);
   stroke-dasharray: 251.2px;
   stroke-dashoffset: 188.4px;
+}
+
+article {
+  margin-bottom: 2.5rem;
+}
+
+article:last-of-type {
+  margin-bottom: 0;
+}
+
+h5 {
+  margin-bottom: 1rem;
 }
