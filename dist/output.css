@@ -782,8 +782,20 @@ html {
   margin-right: auto;
 }
 
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 
 .mb-8{
@@ -824,10 +836,6 @@ html {
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.mt-80{
-  margin-top: 20rem;
 }
 
 .box-border{
@@ -991,6 +999,10 @@ html {
 
 .max-w-96{
   max-width: 24rem;
+}
+
+.max-w-\[100rem\]{
+  max-width: 100rem;
 }
 
 .flex-1{
@@ -1857,6 +1869,10 @@ html {
   border-radius: 9999px;
 }
 
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
 .rounded-sm{
   border-radius: 0.125rem;
 }
@@ -2144,6 +2160,10 @@ html {
   padding: 0.5rem;
 }
 
+.p-2\.5{
+  padding: 0.625rem;
+}
+
 .p-8{
   padding: 2rem;
 }
@@ -2270,6 +2290,11 @@ html {
   line-height: 1.75rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -2277,6 +2302,10 @@ html {
 
 .font-bold{
   font-weight: 700;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .uppercase{
@@ -2890,6 +2919,11 @@ h5 {
     line-height: 2rem;
   }
 
+  .lg\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .lg\:text-7xl{
     font-size: 4.5rem;
     line-height: 1;
@@ -2902,6 +2936,10 @@ h5 {
 }
 
 @media (prefers-color-scheme: dark){
+  .dark\:text-white{
+    color: var(--color-white);
+  }
+
   @media (min-width: 1024px){
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover{
       paint-order: markers;
