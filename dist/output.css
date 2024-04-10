@@ -765,20 +765,6 @@ html {
   inset: 0px;
 }
 
-.inset-1\/2{
-  inset: 50%;
-}
-
-.inset-x-1\/2{
-  left: 50%;
-  right: 50%;
-}
-
-.inset-y-1\/2{
-  top: 50%;
-  bottom: 50%;
-}
-
 .end-1{
   inset-inline-end: 0.25rem;
 }
@@ -1067,8 +1053,8 @@ html {
   max-width: 24rem;
 }
 
-.max-w-\[100rem\]{
-  max-width: 100rem;
+.max-w-sm{
+  max-width: 24rem;
 }
 
 .flex-1{
@@ -2102,6 +2088,16 @@ html {
   background-color: var(--color-green);
 }
 
+.bg-red-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 138 4 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-90{
   --tw-bg-opacity: 0.9;
 }
@@ -3036,6 +3032,14 @@ h5 {
 }
 
 @media (min-width: 1024px){
+  .lg\:w-3\/5{
+    width: 60%;
+  }
+
+  .lg\:max-w-md{
+    max-width: 28rem;
+  }
+
   .lg\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3058,10 +3062,6 @@ h5 {
 }
 
 @media (prefers-color-scheme: dark){
-  .dark\:text-white{
-    color: var(--color-white);
-  }
-
   @media (min-width: 1024px){
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover{
       paint-order: markers;

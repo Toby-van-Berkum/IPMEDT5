@@ -14,6 +14,8 @@ module.exports = {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
+      red: colors.red,
+      green: colors.green
     },
     extend: {
       fontFamily: ["inter", "sans-serif"],
