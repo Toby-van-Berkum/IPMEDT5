@@ -4,3 +4,4 @@ docs/
 css/
 export.scss
 export/
+dist/output.css

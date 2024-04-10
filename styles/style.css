@@ -12,6 +12,15 @@
   .btn-alert {
     @apply px-6 py-2 m-auto border-2 border-orange rounded-sm bg-orange text-darkgray hover:bg-darkgray hover:text-white hover:border-orange;
   }
+  .btn-secondary {
+    @apply px-6 py-2 m-auto border-2 border-white rounded-sm bg-darkgray text-white hover:border-green;
+  }
+  .plant-week-graph-container {
+    @apply flex flex-col place-items-center;
+  }
+  .plant-week-graph {
+    @apply flex flex-col justify-end w-2 h-32 overflow-hidden rounded-full bg-darkgray flex-nowrap border-2 border-[#292929];
+  }
 }
 
 
@@ -38,7 +47,7 @@
 
 /* Some color to highlight the rings */
 .svg-indicator-track {
-  stroke: var(--color-blue);
+  stroke: var(--color-green);
 }
 
 .svg-indicator-indication {

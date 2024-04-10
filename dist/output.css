@@ -652,6 +652,44 @@ html {
   color: var(--color-white);
 }
 
+.btn-secondary{
+  margin: auto;
+  border-radius: 0.125rem;
+  border-width: 2px;
+  border-color: var(--color-white);
+  background-color: var(--color-darkgray);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--color-white);
+}
+
+.btn-secondary:hover{
+  border-color: var(--color-green);
+}
+
+.plant-week-graph-container{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.plant-week-graph{
+  display: flex;
+  height: 8rem;
+  width: 0.5rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: 9999px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(41 41 41 / var(--tw-border-opacity));
+  background-color: var(--color-darkgray);
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -727,8 +765,30 @@ html {
   inset: 0px;
 }
 
+.inset-1\/2{
+  inset: 50%;
+}
+
+.inset-x-1\/2{
+  left: 50%;
+  right: 50%;
+}
+
+.inset-y-1\/2{
+  top: 50%;
+  bottom: 50%;
+}
+
 .end-1{
   inset-inline-end: 0.25rem;
+}
+
+.left-1\/2{
+  left: 50%;
+}
+
+.top-1\/2{
+  top: 50%;
 }
 
 .isolate{
@@ -790,6 +850,10 @@ html {
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.\!ml-8{
+  margin-left: 2rem !important;
 }
 
 .mb-2{
@@ -951,10 +1015,6 @@ html {
   height: 4rem;
 }
 
-.h-32{
-  height: 8rem;
-}
-
 .h-6{
   height: 1.5rem;
 }
@@ -973,10 +1033,6 @@ html {
 
 .max-h-screen{
   max-height: 100vh;
-}
-
-.w-2{
-  width: 0.5rem;
 }
 
 .w-6{
@@ -1057,6 +1113,16 @@ html {
 
 .border-separate{
   border-collapse: separate;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2{
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .\!transform{
@@ -1971,6 +2037,10 @@ html {
   border-bottom-width: 1px;
 }
 
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
 .border-e{
   border-inline-end-width: 1px;
 }
@@ -2015,10 +2085,6 @@ html {
   border-style: none;
 }
 
-.border-gray{
-  border-color: var(--color-gray);
-}
-
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2028,16 +2094,8 @@ html {
   background-color: var(--color-black);
 }
 
-.bg-blue{
-  background-color: var(--color-blue);
-}
-
 .bg-darkgray{
   background-color: var(--color-darkgray);
-}
-
-.bg-gray{
-  background-color: var(--color-gray);
 }
 
 .bg-green{
@@ -2815,7 +2873,7 @@ html {
 /* Some color to highlight the rings */
 
 .svg-indicator-track {
-  stroke: var(--color-blue);
+  stroke: var(--color-green);
 }
 
 .svg-indicator-indication {
@@ -2904,6 +2962,10 @@ h5 {
 .hover\:before\:text-center:hover::before{
   content: var(--tw-content);
   text-align: center;
+}
+
+.focus\:border-b-0:focus{
+  border-bottom-width: 0px;
 }
 
 .focus\:outline-none:focus{
