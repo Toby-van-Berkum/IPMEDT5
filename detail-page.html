@@ -13,25 +13,18 @@
   <!-- sidebar -->
   <aside class="flex-col hidden w-64 bg-darkgray md:flex">
     <article class="flex items-center justify-center h-16">
-      <p class="font-bold">Happy <span style="color: var(--color-green);">Plants</span></p>
+      <a href="/" class="font-bold">Happy <span style="color: var(--color-green);">Plants</span></a>
     </article>
     <article class="flex flex-col flex-1 overflow-y-auto">
       <nav class="flex-1 py-4">
-        <a href="#" class="flex items-center px-4 py-2 text-gray hover:bg-green hover:text-darkgray">
+        <a href="/" class="flex items-center px-4 py-2 text-gray hover:bg-green hover:text-darkgray">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           Dashboard
         </a>
-        <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-          Instellingen
-        </a>
-        <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray hover:bg-green hover:text-darkgray">
+        <a href="/account.html" class="flex items-center px-4 py-2 mt-2 text-gray hover:bg-green hover:text-darkgray">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -48,7 +41,7 @@
       <h6>Strelitzia</h6>
       <p class="ml-auto">Woonkamer</p>
     </article>
-    <!-- diveder -->
+    <!-- divider -->
     <article class="w-full h-px pb-0.5 mx-auto bg-darkgray">
     </article>
     <article>
@@ -128,10 +121,10 @@
       <h5 class="font-bold">Instellingen</h5>
       <section class="flex flex-row space-x-4 place-items-center">
         <p>Krijgt water wanneer de aarde droger is dan</p>
-        <input class="p-2 text-white border-b-2 w-[4rem] bg-darkgray focus:ring-2 focus:outline-none focus:ring-inset focus:ring-green focus:border-b-0" 
+        <input class="input-field w-[4rem]" 
           type="number" id="" name="" min="1" max="100" cols="3" rows="1">
         <p>procent.</p>
-        <button class="!ml-8 btn-secondary">Opslaan</button>
+        <button class="btn-secondary">Opslaan</button>
       </section>
       <button class="mt-4 btn-alert">Verwijderen</button>
     </article>

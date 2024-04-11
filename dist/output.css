@@ -615,7 +615,7 @@ html {
 }
 
 .btn-primary{
-  margin: auto;
+  margin-right: auto;
   border-radius: 0.125rem;
   border-width: 2px;
   border-color: var(--color-green);
@@ -634,7 +634,7 @@ html {
 }
 
 .btn-alert{
-  margin: auto;
+  margin-right: auto;
   border-radius: 0.125rem;
   border-width: 2px;
   border-color: var(--color-orange);
@@ -653,7 +653,7 @@ html {
 }
 
 .btn-secondary{
-  margin: auto;
+  margin-right: auto;
   border-radius: 0.125rem;
   border-width: 2px;
   border-color: var(--color-white);
@@ -688,6 +688,24 @@ html {
   --tw-border-opacity: 1;
   border-color: rgb(41 41 41 / var(--tw-border-opacity));
   background-color: var(--color-darkgray);
+}
+
+.input-field{
+  border-bottom-width: 2px;
+  background-color: var(--color-darkgray);
+  padding: 0.5rem;
+  color: var(--color-white);
+}
+
+.input-field:focus{
+  border-bottom-width: 0px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-inset: inset;
+  --tw-ring-color: var(--color-green);
 }
 
 .sr-only{
@@ -833,13 +851,25 @@ html {
   clear: none;
 }
 
+.m-auto{
+  margin: auto;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
 }
 
-.\!ml-8{
-  margin-left: 2rem !important;
+.\!mb-1{
+  margin-bottom: 0.25rem !important;
+}
+
+.\!mb-2{
+  margin-bottom: 0.5rem !important;
+}
+
+.\!mr-0{
+  margin-right: 0px !important;
 }
 
 .mb-2{
@@ -848,6 +878,10 @@ html {
 
 .mb-20{
   margin-bottom: 5rem;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
 }
 
 .mb-4{
@@ -896,6 +930,10 @@ html {
 
 .mt-8{
   margin-top: 2rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
 }
 
 .box-border{
@@ -1001,6 +1039,10 @@ html {
   height: 4rem;
 }
 
+.h-48{
+  height: 12rem;
+}
+
 .h-6{
   height: 1.5rem;
 }
@@ -1021,16 +1063,16 @@ html {
   max-height: 100vh;
 }
 
+.w-1\/2{
+  width: 50%;
+}
+
 .w-6{
   width: 1.5rem;
 }
 
 .w-64{
   width: 16rem;
-}
-
-.w-\[4rem\]{
-  width: 4rem;
 }
 
 .w-\[this-is\\\\\]{
@@ -1047,6 +1089,18 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[4rem\]{
+  width: 4rem;
+}
+
+.w-1\/3{
+  width: 33.333333%;
+}
+
+.w-2\/3{
+  width: 66.666667%;
 }
 
 .max-w-96{
@@ -1129,6 +1183,10 @@ html {
 
 .transform-none{
   transform: none;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .touch-auto{
@@ -2023,10 +2081,6 @@ html {
   border-bottom-width: 1px;
 }
 
-.border-b-2{
-  border-bottom-width: 2px;
-}
-
 .border-e{
   border-inline-end-width: 1px;
 }
@@ -2096,6 +2150,10 @@ html {
 .bg-yellow-600{
   --tw-bg-opacity: 1;
   background-color: rgb(202 138 4 / var(--tw-bg-opacity));
+}
+
+.bg-gray{
+  background-color: var(--color-gray);
 }
 
 .bg-opacity-90{
@@ -2519,6 +2577,10 @@ html {
   -moz-osx-font-smoothing: auto;
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
 .bg-blend-normal{
   background-blend-mode: normal;
 }
@@ -2926,6 +2988,14 @@ h5 {
   }
 }
 
+.checked\:border-green:checked{
+  border-color: var(--color-green);
+}
+
+.checked\:bg-green:checked{
+  background-color: var(--color-green);
+}
+
 .hover\:border-gray:hover{
   border-color: var(--color-gray);
 }
@@ -2958,29 +3028,6 @@ h5 {
 .hover\:before\:text-center:hover::before{
   content: var(--tw-content);
   text-align: center;
-}
-
-.focus\:border-b-0:focus{
-  border-bottom-width: 0px;
-}
-
-.focus\:outline-none:focus{
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.focus\:ring-2:focus{
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.focus\:ring-inset:focus{
-  --tw-ring-inset: inset;
-}
-
-.focus\:ring-green:focus{
-  --tw-ring-color: var(--color-green);
 }
 
 .focus\:hover\:text-center:hover:focus{

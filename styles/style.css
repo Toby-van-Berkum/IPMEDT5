@@ -7,19 +7,22 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-2 m-auto border-2 border-green rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-white hover:border-green;
+    @apply mr-auto px-6 py-2 border-2 border-green rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-white hover:border-green;
   }
   .btn-alert {
-    @apply px-6 py-2 m-auto border-2 border-orange rounded-sm bg-orange text-darkgray hover:bg-darkgray hover:text-white hover:border-orange;
+    @apply mr-auto px-6 py-2 border-2 border-orange rounded-sm bg-orange text-darkgray hover:bg-darkgray hover:text-white hover:border-orange;
   }
   .btn-secondary {
-    @apply px-6 py-2 m-auto border-2 border-white rounded-sm bg-darkgray text-white hover:border-green;
+    @apply mr-auto px-6 py-2 border-2 border-white rounded-sm bg-darkgray text-white hover:border-green;
   }
   .plant-week-graph-container {
     @apply flex flex-col place-items-center;
   }
   .plant-week-graph {
     @apply flex flex-col justify-end w-2 h-32 overflow-hidden rounded-full bg-darkgray flex-nowrap border-2 border-[#292929];
+  }
+  .input-field {
+    @apply p-2 text-white border-b-2 bg-darkgray focus:ring-2 focus:outline-none focus:ring-inset focus:ring-green focus:border-b-0;
   }
 }
 
