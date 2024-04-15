@@ -1,5 +1,7 @@
 const authApiPath = 'http://192.168.137.212:8081/happy-plants/v1/register'
 
+const registerBtn = document.getElementById('regBtn');
+
 const email = document.getElementById('email');
 const fname = document.getElementById('fname');
 const surname = document.getElementById('surname');
