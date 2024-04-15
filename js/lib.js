@@ -26,8 +26,8 @@ function addApiEvent(btn, apiPath, func) {
  * @throws {Error} - Throws an error if the method provided is not one of 'POST', 'GET', 'PUT', or 'DELETE'.
  */
 function makeOptions(method, headers, data) {
-    if (!['POST', 'GET', 'PUT', 'DELETE'].includes(method)) 
-        throw new Error("Invalid HTTP method. Only 'POST', 'GET', 'PUT', or 'DELETE' are supported.");
+    if (!['POST', 'GET', 'PUT', 'DELETE', 'PATCH'].includes(method)) 
+        throw new Error("Invalid HTTP method. Only 'POST', 'GET', 'PUT', 'PATCH', or 'DELETE' are supported.");
 
     return {
         method: method,
