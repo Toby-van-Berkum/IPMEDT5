@@ -1,4 +1,3 @@
-import { addApiEvent } from "./lib";
 const authApiPath = 'http://ipmedt5.local:8081/happy-plants/v1/auth'
 
 const email = document.getElementById('email');
