@@ -7,8 +7,8 @@ const authBtn = document.getElementById('authButton');
 addApiEvent(authBtn, authApiPath+'/authenticate',
 function(apiPath) {
     const data = {
-        "email": `${email.textContent}`,
-        "password": `${password.textContent}`
+        "email": `${email.value}`,
+        "password": `${password.value}`
     }
 
     const options = makeOptions('POST', {
