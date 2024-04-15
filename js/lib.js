@@ -1,7 +1,6 @@
-
 const apiKey = {
-    access: '',
-    refresh: '',
+    access: localStorage.getItem("ACCESS"),
+    refresh: localStorage.getItem("REFRESH"),
 }
 
 /**
@@ -15,6 +14,16 @@ function addApiEvent(btn, apiPath, func) {
     btn.addEventListener("click", function() {
         func(apiPath);
     });
+}
+
+/**
+ * Attaches an event listener to a given button element that triggers a custom function with an API path as argument when clicked.
+ * @param {string} apiPath - The API URL path to be passed as an argument to the custom function.
+ * @param {function} func - The custom function to be executed when the button is clicked. It should accept the API path as its argument.
+ */
+function addApiEventOnLoad(apiPath, func) {
+    if (apiPath === null && func === null) return;
+    window.addEventListener('DOMContentLoaded', func(apiPath))
 }
 
 /**

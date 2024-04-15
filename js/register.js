@@ -30,8 +30,8 @@ function(apiPath) {
             return response.json();
         })
         .then(data => {
-            apiKey.access = data.access_token;
-            apiKey.refresh = data.refresh_token;
+            localStorage.setItem("ACCESS", data.access_token);
+            localStorage.setItem("REFRESH", data.refresh_token);
             location.replace('/login.html')
         })
         .catch(error => {
