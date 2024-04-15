@@ -1,4 +1,4 @@
-const authApiPath = 'http://192.168.137.212:8081/happy-plants/v1/register'
+const authApiPath = 'http://192.168.137.212:8081/happy-plants/v1/auth'
 
 const registerBtn = document.getElementById('regBtn');
 
