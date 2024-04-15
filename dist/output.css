@@ -1067,6 +1067,10 @@ html {
   width: 50%;
 }
 
+.w-1\/3{
+  width: 33.333333%;
+}
+
 .w-2\/3{
   width: 66.666667%;
 }
@@ -2150,6 +2154,17 @@ html {
 
 .bg-gradient-to-t{
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.from-stone-900{
+  --tw-gradient-from: #1c1917 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(28 25 23 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-stone-900\/40{
+  --tw-gradient-to: rgb(28 25 23 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(28 25 23 / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .decoration-slice{

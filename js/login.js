@@ -25,9 +25,15 @@ function(apiPath) {
             return response.json();
         })
         .then(data => {
-            apiKey.access = data.access_token;
-            apiKey.refresh = data.refresh_token;
-            location.replace('/dashboard.html')
+            localStorage.setItem("ACCESS", data.access_token);
+            localStorage.setItem("REFRESH", data.refresh_token);
+            if (localStorage.getItem("ACCESS") == "INVALID" || localStorage.getItem("REFRESH") == "INVALID") {
+                console.log("Big sad :(");
+            }
+            else {
+                location.replace('/dashboard.html')
+            }
+
         })
         .catch(error => {
             console.error('Error:', error);

@@ -57,7 +57,10 @@
           class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Slaapkamer</a>
         <a href=""
           class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Voeg kamer toe</a>
-      </section>
+        <button
+          id="refreshBtn"
+          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Refresh</button>
+        </section>
     </article>
     <!-- alertbox -->
     <article class="flex items-center px-6 py-4 text-lg rounded-sm bg-darkgray">
@@ -69,40 +72,12 @@
       Het waterreservoir van plant 3 is bijna leeg
     </article>
     <!-- grid -->
-    <article class="grid grid-cols-3 gap-4 mt-8">
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 1</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 2</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 3</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 4</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 5</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 6</h3>
-      </section>
+    <article id ="plant-container" class="grid grid-cols-3 gap-4 mt-8">
+      <!-- Dynamically loaded plants -->
     </article>
   </main>
-  <script src="/js/main.js"></script>
+  <script src="js/lib.js"></script>
+  <script src="js/dashboard.js"></script>
 </body>
 
 </html>
