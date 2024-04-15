@@ -1,4 +1,5 @@
-const authApiPath = 'http://ipmedt5.local:8081/happy-plants/v1/auth'
+// const authApiPath = 'http://ipmedt5.local:8081/happy-plants/v1/auth'
+const authApiPath = 'http://192.168.137.212:8081/happy-plants/v1/auth'
 
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -6,6 +7,8 @@ const authBtn = document.getElementById('authButton');
 
 addApiEvent(authBtn, authApiPath+'/authenticate',
 function(apiPath) {
+    console.log(email.value);
+    console.log(password.value);
     const data = {
         "email": `${email.value}`,
         "password": `${password.value}`
