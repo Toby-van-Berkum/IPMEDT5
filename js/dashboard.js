@@ -1,6 +1,49 @@
 window.addEventListener('DOMContentLoaded', () => {
+    // Function to create room buttons
+    function createRoomButton(room) {
+        const roomButton = document.createElement('a');
+        roomButton.href = "#";
+        roomButton.textContent = room.roomName;
+        roomButton.classList.add('px-6', 'py-2', 'mr-1', 'border-2', 'rounded-sm', 'bg-green', 'text-darkgray', 'hover:bg-darkgray', 'hover:text-green', 'hover:border-gray');
+        roomButton.addEventListener('click', () => {
+            // Handle click event for the room button
+            // You can perform actions like fetching plant data for the selected room
+            console.log(`Clicked on room: ${room.roomName}`);
+        });
+        return roomButton;
+    }
 
+    // Function to fetch rooms and create room buttons
+    function loadRooms(apiPath) {
+        const options = makeOptionsWithoutBody('GET', {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem("ACCESS")}`,
+        });
+
+        fetch(apiPath, options)
+            .then(response => {
+                if (!response.ok)
+                    throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(data => {
+                const toggleButtonsContainer = document.getElementById('toggle-buttons-container');
+                toggleButtonsContainer.innerHTML = ''; // Clear existing room buttons
+
+                data.forEach(room => {
+                    const roomButton = createRoomButton(room);
+                    toggleButtonsContainer.appendChild(roomButton);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    // Call loadRooms function to fetch and create room buttons
+    loadRooms(plantContextApiPath);
 });
+
 
 const plantContextApiPath = 'http://192.168.137.212:8081/happy-plants/v1/plant/context'
 const plantProfileApiPath = 'http://192.168.137.212:8081/happy-plants/v1/plant/profile'
