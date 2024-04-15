@@ -17,6 +17,20 @@ function addApiEvent(btn, apiPath, func) {
 }
 
 /**
+ * Attaches an event listener to a given button element that triggers a custom function with an API path as argument when clicked.
+ * @param {HTMLButtonElement} btn - The button element to attach the event listener to.
+ * @param {string} apiPath - The API URL path to be passed as an argument to the custom function.
+ * @param {function} func - The custom function to be executed when the button is clicked. It should accept the API path as its argument.
+ * @param {Object} object - The custom function to be executed when the button is clicked. It should accept the API path as its argument.
+ */
+function addApiEventParams(btn, apiPath, func, object) {
+    if (btn === null && apiPath === null && func === null) return;
+    btn.addEventListener("click", function() {
+        func(apiPath, object);
+    });
+}
+
+/**
  * Attaches an event listener to a given to window element that triggers a custom function with an API path as argument when clicked.
  * @param {string} apiPath - The API URL path to be passed as an argument to the custom function.
  * @param {function} func - The custom function to be executed when the button is clicked. It should accept the API path as its argument.
