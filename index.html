@@ -4,105 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy plants | dashboard</title>
+  <title>Happy plants | Home</title>
   <link rel="stylesheet" href="/dist/output.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
 
-<body class="flex h-screen text-white bg-black font-inter">
-  <!-- sidebar -->
-  <aside class="flex-col hidden w-64 bg-darkgray md:flex">
-    <article class="flex items-center justify-center h-16">
-      <p class="font-bold">Happy <span style="color: var(--color-green);">Plants</span></p>
-    </article>
-    <article class="flex flex-col flex-1 overflow-y-auto">
-      <nav class="flex-1 py-4">
-        <a href="#" class="flex items-center px-4 py-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          Dashboard
-        </a>
-        <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-          Instellingen
-        </a>
-        <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-          Account
-        </a>
-      </nav>
-    </article>
-  </aside>
-
-  <!-- Main content -->
-  <main class="flex flex-col flex-1 px-12 py-8 overflow-y-auto">
-    <article class="mb-8">
-      <h1 class="mb-4 text-4xl font-bold">Jouw <span style="color: var(--color-green);">planten</span></h1>
-
-      <!-- button toggle -->
-      <section id="toggle-buttons-container">
-        <a href=""
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Woonkamer</a>
-        <a href=""
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Badkamer</a>
-        <a href=""
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Slaapkamer</a>
-        <a href=""
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Voeg kamer toe</a>
+<body class="flex flex-col h-screen text-white bg-fixed bg-black bg-center bg-no-repeat bg-cover md:flex-row font-inter md:bg-black">
+  <aside class="hidden max-w-sm max-h-screen md:block md:bg-fixed lg:max-w-md">
+    <figure class="h-full">
+      <img src="/img/plant1.avif" alt="A plant" id="aside_img" class="object-cover h-full md:rounded-br-[15rem]">
+    </figure>
+  </aside>  
+  <main class="flex flex-col items-center justify-center flex-grow overflow-hidden md:flex-row">
+    <section class="p-8 bg-black bg-opacity-90">
+      <h2 class="text-3xl lg:text-2xl">Welkom bij</h2>
+      <h1 class="text-4xl font-bold lg:text-7xl">
+        <span class="text-green">Happy </span><span class="text-green">Plants</span>
+      </h1>
+      <section class="mt-24">
+        <button class="bg-green rounded text-black font-bold px-4 py-2 text-xl hover:bg-darkgray hover:text-green border-2 hover:border-green" onclick="location.href='/login.html'">Login</button>
+      </section>    
+      <section class="mt-4">
+        <a href="/register.html" class="block text-lg lg:text-xl">Nog geen account? <span class="text-green">Maak een account</span></a>
       </section>
-    </article>
-    <!-- alertbox -->
-    <article class="flex items-center px-6 py-4 text-lg rounded-sm bg-darkgray">
-      <svg viewBox="0 0 24 24" class="w-6 h-6 mr-3 text-yellow-600 sm:w-5 sm:h-5">
-        <path fill="var(--color-orange)"
-          d="M23.119,20,13.772,2.15h0a2,2,0,0,0-3.543,0L.881,20a2,2,0,0,0,1.772,2.928H21.347A2,2,0,0,0,23.119,20ZM11,8.423a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Zm1.05,11.51h-.028a1.528,1.528,0,0,1-1.522-1.47,1.476,1.476,0,0,1,1.448-1.53h.028A1.527,1.527,0,0,1,13.5,18.4,1.475,1.475,0,0,1,12.05,19.933Z">
-        </path>
-      </svg>
-      Het waterreservoir van plant 3 is bijna leeg
-    </article>
-    <!-- grid -->
-    <article class="grid grid-cols-3 gap-4 mt-8">
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 1</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 2</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 3</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 4</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 5</h3>
-      </section>
-      <section class="relative flex flex-col justify-end px-8 pt-40 pb-4 overflow-hidden rounded-sm isolate">
-        <img src="img/plant.avif" alt="plant" class="absolute inset-0 object-cover w-full h-full">
-        <div class="absolute inset-0 bg-gradient-to-t from-darkgray-900 via-darkgray-900/40"></div>
-        <h3 class="z-10 mt-3 text-3xl font-bold text-white">Plant 6</h3>
-      </section>
-    </article>
+    </section>
   </main>
-  <script src="/js/main.js"></script>
+  <script src="/js/aside.js"></script>
 </body>
-
 </html>
