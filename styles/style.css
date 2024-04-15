@@ -22,7 +22,7 @@
     @apply flex flex-col justify-end w-2 h-32 overflow-hidden rounded-full bg-darkgray flex-nowrap border-2 border-[#292929];
   }
   .input-field {
-    @apply p-2 text-white border-b-2 bg-darkgray focus:ring-2 focus:outline-none focus:ring-inset focus:ring-green focus:border-b-0;
+    @apply p-2 text-white rounded-sm bg-darkgray focus:ring-2 focus:outline-none focus:ring-inset focus:ring-green focus:border-b-0;
   }
 }
 
