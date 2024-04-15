@@ -17,7 +17,7 @@ function addApiEvent(btn, apiPath, func) {
 }
 
 /**
- * Attaches an event listener to a given button element that triggers a custom function with an API path as argument when clicked.
+ * Attaches an event listener to a given to window element that triggers a custom function with an API path as argument when clicked.
  * @param {string} apiPath - The API URL path to be passed as an argument to the custom function.
  * @param {function} func - The custom function to be executed when the button is clicked. It should accept the API path as its argument.
  */
