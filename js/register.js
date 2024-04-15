@@ -32,7 +32,7 @@ function(apiPath) {
         .then(data => {
             apiKey.access = data.access_token;
             apiKey.refresh = data.refresh_token;
-            location.replace('/dashboard.html')
+            location.replace('/login.html')
         })
         .catch(error => {
             console.error('Error:', error);
