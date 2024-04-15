@@ -4,7 +4,7 @@
  * @param {string} apiPath - The API URL path to be passed as an argument to the custom function.
  * @param {function} func - The custom function to be executed when the button is clicked. It should accept the API path as its argument.
  */
-addApiEvent(btn, apiPath, func) {
+function addApiEvent(btn, apiPath, func) {
     if (btn === null && apiPath === null && func === null) return;
     btn.addEventListener("click", function() {
         func(apiPath);
