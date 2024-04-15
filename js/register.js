@@ -1,22 +1,17 @@
-// const authApiPath = 'http://ipmedt5.local:8081/happy-plants/v1/auth'
-const authApiPath = 'http://192.168.137.212:8081/happy-plants/v1/auth'
-
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const authBtn = document.getElementById('authButton');
-
 const apiKey = {
     access: '',
     refresh: '',
 }
 
-addApiEvent(authBtn, authApiPath+'/authenticate',
+// Register API call
+addApiEvent(registerBtn, authApiPath+'/register',
 function(apiPath) {
-    console.log(email.value);
-    console.log(password.value);
     const data = {
-        "email": `${email.value}`,
-        "password": `${password.value}`
+        "firstname": "rolanus",
+        "lastname": "michelle bommel",
+        "email": "rolanus1@mail.com",
+        "password": 5678,
+        "role": "ADMIN"
     }
 
     const options = makeOptions('POST', {
@@ -25,14 +20,14 @@ function(apiPath) {
 
     fetch(apiPath, options)
         .then(response => {
-            if (!response.ok) 
+            if (!response.ok)
                 throw new Error('Network response was not ok');
             return response.json();
         })
         .then(data => {
             apiKey.access = data.access_token;
             apiKey.refresh = data.refresh_token;
-            location.replace('/dashboard.html')
+            console.log(apiKey);
         })
         .catch(error => {
             console.error('Error:', error);
