@@ -5,11 +5,6 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const authBtn = document.getElementById('authButton');
 
-const apiKey = {
-    access: '',
-    refresh: '',
-}
-
 addApiEvent(authBtn, authApiPath+'/authenticate',
 function(apiPath) {
     console.log(email.value);

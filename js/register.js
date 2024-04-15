@@ -1,17 +1,20 @@
-const apiKey = {
-    access: '',
-    refresh: '',
-}
+const authApiPath = 'http://192.168.137.212:8081/happy-plants/v1/register'
+
+const email = document.getElementById('email');
+const fname = document.getElementById('fname');
+const surname = document.getElementById('surname');
+const password = document.getElementById('password');
+const password_confirm = document.getElementById('password_confirm');
 
 // Register API call
 addApiEvent(registerBtn, authApiPath+'/register',
 function(apiPath) {
     const data = {
-        "firstname": "rolanus",
-        "lastname": "michelle bommel",
-        "email": "rolanus1@mail.com",
-        "password": 5678,
-        "role": "ADMIN"
+        "firstname": `${fname.value}`,
+        "lastname": `${surname.value}`,
+        "email": `${email.value}`,
+        "password": `${password.value}`,
+        "role": "USER"
     }
 
     const options = makeOptions('POST', {
