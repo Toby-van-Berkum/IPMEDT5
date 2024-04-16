@@ -13,22 +13,14 @@
   <!-- sidebar -->
   <aside class="flex-col hidden w-64 bg-darkgray md:flex">
     <article class="flex items-center justify-center h-16">
-      <a href="/dashboard.html" class="font-bold">Happy <span style="color: var(--color-green);">Plants</span></a>
+      <a href="/" class="font-bold">Happy <span style="color: var(--color-green);">Plants</span></a>
     </article>
     <article class="flex flex-col flex-1 overflow-y-auto">
       <nav class="flex-1 py-4">
-        <a href="/dashboard.html" class="flex items-center px-4 py-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <a href="/" class="flex items-center px-4 py-2 text-gray hover:bg-green hover:text-darkgray">
           Dashboard
         </a>
         <a href="/account.html" class="flex items-center px-4 py-2 mt-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
           Account
         </a>
       </nav>
@@ -36,99 +28,113 @@
   </aside>
   <!-- Main content -->
   <main class="flex flex-col flex-1 px-12 py-8 overflow-y-auto">
-    <h1 class="mb-4 text-4xl font-bold">Bird of paradise</h1>
-    <article class="flex flex-row">
-      <h6>Strelitzia</h6>
-      <p class="ml-auto">Woonkamer</p>
-    </article>
-    <!-- divider -->
-    <article class="w-full h-px pb-0.5 mx-auto bg-darkgray">
-    </article>
-    <article>
-      <h5 class="font-bold">Water geven</h5>
-      <section class="grid grid-cols-3 place-items-center justify-items-start">
-        <article class="relative">
-          <p class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">75%</p>
-          <svg class="svg-indicator">
-            <circle class="svg-indicator-track" />
-            <circle class="svg-indicator-indication" />
-          </svg>
-        </article>
-        <section>
-          <p>Heeft om 11:00 water gekregen</p>
-          <p>Krijgt rond 23:00 water</p>
-          <p class="text-gray">Het waterreservoir is gevuld</p>
+    <!-- the hamburger menu -->
+    <nav id="js-navigation" class="flex flex-row justify-end mb-2 cursor-pointer md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <p class="ml-2">Menu</p>
+    </nav>
+
+    <!-- the content that becomes visible when clicking the hamburger menu -->
+    <section id="js-navigation-content" class="flex-col hidden">
+      <a href="/" class="mb-4 font-bold">Happy <span style="color: var(--color-green);">Plants</span></a>
+      <a href="/" class="mb-1">
+        Dashboard
+      </a>
+      <a href="/account.html" class="mb-1">
+        Account
+      </a>
+    </section>
+    <!-- turn off with js when nav visible -->
+    <section id="js-main-content">
+      <h1 class="mb-4 text-4xl font-bold">Bird of paradise</h1>
+      <article class="flex flex-row">
+        <h6>Strelitzia</h6>
+        <p class="ml-auto">Woonkamer</p>
+      </article>
+      <!-- divider -->
+      <article class="w-full h-px pb-0.5 mx-auto bg-darkgray">
+      </article>
+      <article>
+        <h5 class="font-bold">Water geven</h5>
+        <section class="grid grid-cols-3 place-items-center justify-items-start">
+          <article class="relative">
+            <p class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">50%</p>
+            <svg class="svg-indicator">
+              <circle class="svg-indicator-track" />
+              <circle class="svg-indicator-indication" />
+            </svg>
+          </article>
+          <section>
+            <p>Heeft om 11:00 water gekregen</p>
+            <p>Krijgt rond 23:00 water</p>
+            <p class="text-gray">Het waterreservoir is gevuld</p>
+          </section>
+          <a href="" class="btn-primary">Geef nu water</a>
         </section>
-        <a href="" class="btn-primary">Geef nu water</a>
-      </section>
-    </article>
-    <article>
-      <h5 class="font-bold">Vochtigheid van de aarde van de afgelopen week</h5>
-      <section class="grid grid-cols-7 gap-6 text-center justify-items-center max-w-96">
-        <!-- graphics -->
-        <article class="plant-week-graph-container">
-          <div class="plant-week-graph"
-            role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="overflow-hidden rounded-full bg-green" style="height: 24%"></div>
-          </div>
-          <p class="mt-2">Ma</p>
-        </article>
-        <article class="plant-week-graph-container">
-          <div class="plant-week-graph"
-            role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            <div class="overflow-hidden rounded-full bg-green" style="height: 50%"></div>
-          </div>
-          <p class="mt-2">Di</p>
-        </article>
-        <article class="plant-week-graph-container">
-          <div class="plant-week-graph"
-            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            <div class="overflow-hidden rounded-full bg-green" style="height: 70%"></div>
-          </div>
-          <p class="mt-2">Wo</p>
-        </article>
-        <article class="plant-week-graph-container">
-          <div class="plant-week-graph"
-            role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            <div class="overflow-hidden rounded-full bg-green" style="height: 90%"></div>
-          </div>
-          <p class="mt-2">Do</p>
-        </article>
-        <article class="plant-week-graph-container">
-          <div class="plant-week-graph"
-            role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100">
-            <div class="overflow-hidden rounded-full bg-green" style="height: 17%"></div>
-          </div>
-          <p class="mt-2">Vr</p>
-        </article>
-        <article class="plant-week-graph-container">
-          <div class="plant-week-graph"
-            role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            <div class="overflow-hidden rounded-full bg-green" style="height: 90%"></div>
-          </div>
-          <p class="mt-2">Za</p>
-        </article>
-        <article class="plant-week-graph-container">
-          <div class="plant-week-graph"
-            role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100">
-            <div class="overflow-hidden rounded-full bg-green" style="height: 17%"></div>
-          </div>
-          <p class="mt-2">Zo</p>
-        </article>
-      </section>
-    </article>
-    <article>
-      <h5 class="font-bold">Instellingen</h5>
-      <section class="flex flex-row space-x-4 place-items-center">
-        <p>Krijgt water wanneer de aarde droger is dan</p>
-        <input class="input-field w-[4rem]" 
-          type="number" id="" name="" min="1" max="100" cols="3" rows="1">
-        <p>procent.</p>
-        <button class="btn-secondary">Opslaan</button>
-      </section>
-      <button class="mt-4 btn-alert">Verwijderen</button>
-    </article>
+      </article>
+      <article>
+        <h5 class="font-bold">Vochtigheid van de aarde van de afgelopen week</h5>
+        <section class="grid grid-cols-7 gap-6 text-center justify-items-center max-w-96">
+          <!-- graphics -->
+          <article class="plant-week-graph-container">
+            <div class="plant-week-graph" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="overflow-hidden rounded-full bg-green" style="height: 24%"></div>
+            </div>
+            <p class="mt-2">Ma</p>
+          </article>
+          <article class="plant-week-graph-container">
+            <div class="plant-week-graph" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="overflow-hidden rounded-full bg-green" style="height: 50%"></div>
+            </div>
+            <p class="mt-2">Di</p>
+          </article>
+          <article class="plant-week-graph-container">
+            <div class="plant-week-graph" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="overflow-hidden rounded-full bg-green" style="height: 70%"></div>
+            </div>
+            <p class="mt-2">Wo</p>
+          </article>
+          <article class="plant-week-graph-container">
+            <div class="plant-week-graph" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="overflow-hidden rounded-full bg-green" style="height: 90%"></div>
+            </div>
+            <p class="mt-2">Do</p>
+          </article>
+          <article class="plant-week-graph-container">
+            <div class="plant-week-graph" role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100">
+              <div class="overflow-hidden rounded-full bg-green" style="height: 17%"></div>
+            </div>
+            <p class="mt-2">Vr</p>
+          </article>
+          <article class="plant-week-graph-container">
+            <div class="plant-week-graph" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="overflow-hidden rounded-full bg-green" style="height: 90%"></div>
+            </div>
+            <p class="mt-2">Za</p>
+          </article>
+          <article class="plant-week-graph-container">
+            <div class="plant-week-graph" role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100">
+              <div class="overflow-hidden rounded-full bg-green" style="height: 17%"></div>
+            </div>
+            <p class="mt-2">Zo</p>
+          </article>
+        </section>
+      </article>
+      <article>
+        <h5 class="font-bold">Instellingen</h5>
+        <section class="flex flex-row space-x-4 place-items-center">
+          <p>Krijgt water wanneer de aarde droger is dan</p>
+          <input class="input-field w-[4rem]" type="number" id="" name="" min="1" max="100" cols="3" rows="1">
+          <p>procent.</p>
+          <button class="btn-secondary">Opslaan</button>
+        </section>
+        <button class="mt-4 btn-alert">Verwijderen</button>
+      </article>
+    </section>
   </main>
   <script src="js/detail-page.js"></script>
 </body>
+
 </html>
