@@ -119,7 +119,7 @@ function getPlantContexts(apiPath) {
             data.forEach(room => {
                 room.plantProfiles.forEach(plant => {
                     const plantElement = document.createElement('section');
-                    plantElement.classList.add('relative', 'flex', 'flex-col', 'justify-end', 'px-8', 'pt-40', 'pb-4', 'overflow-hidden', 'rounded-sm', 'isolate');
+                    plantElement.classList.add('relative', 'flex', 'flex-col', 'justify-end', 'px-8', 'pt-40', 'pb-4', 'overflow-hidden', 'rounded-sm', 'isolate', 'cursor-pointer');
                     
                     const plantImage = document.createElement('img');
                     plantImage.src = `/img/plant3.avif`; // Assuming you have an image property in your data
@@ -141,6 +141,11 @@ function getPlantContexts(apiPath) {
                     }
 
                     plantContainer.appendChild(plantElement);
+
+                    plantElement.addEventListener('click', () => {
+                        // Redirect to the detail page with the plant object and room name
+                        redirectToDetailPage(plant, room.roomName);
+                    });
                 });
             });
         })
@@ -148,6 +153,17 @@ function getPlantContexts(apiPath) {
             console.error('Error:', error);
         });
 }
+
+function redirectToDetailPage(plantObject, roomName) {
+    // Store the plant object and room name in localStorage
+    localStorage.setItem('selectedPlant', JSON.stringify(plantObject));
+    localStorage.setItem('selectedRoom', roomName);
+    
+    // Redirect to the detail page
+    window.location.href = '/detail-page.html';
+}
+
+
 
 addApiEventOnLoad(plantContextApiPath, getPlantContexts);
 addApiEvent(plantContextGetBtn, plantContextApiPath, getPlantContexts);

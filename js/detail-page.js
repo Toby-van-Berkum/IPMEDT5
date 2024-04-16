@@ -23,3 +23,25 @@ document.addEventListener("DOMContentLoaded", () => {
 function stripPercentage(percentageString) {
   return percentageString.replace('%', '');
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Retrieve the plant object from localStorage
+  const plantObjectString = localStorage.getItem('selectedPlant');
+  const roomName = localStorage.getItem("selectedRoom")
+  const plantObject = JSON.parse(plantObjectString);
+
+  console.log(plantObject)
+  
+  // Check if the plant object is available
+  if (plantObject) {
+      // Set the plant name dynamically
+      const plantNameElement = document.querySelector('h1');
+      plantNameElement.textContent = plantObject.plantProfileName;
+
+      // Set the room name dynamically
+      const roomNameElement = document.querySelector('p.ml-auto');
+      roomNameElement.textContent = roomName;
+  } else {
+      console.error('Error: Plant object is missing or incomplete.');
+  }
+});
