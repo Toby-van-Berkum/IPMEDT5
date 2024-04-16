@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressBar = plantGraph.firstElementChild;
     let percentage = progressBar.style.height;
     let percentageStripped = stripPercentage(percentage);
-    console.log(percentageStripped);
     if (percentageStripped < 40) {
       progressBar.classList.remove('bg-green');
       progressBar.classList.remove('bg-yellow-600');
@@ -29,8 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const plantObjectString = localStorage.getItem('selectedPlant');
   const roomName = localStorage.getItem("selectedRoom")
   const plantObject = JSON.parse(plantObjectString);
-
-  console.log(plantObject)
   
   // Check if the plant object is available
   if (plantObject) {

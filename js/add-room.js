@@ -4,12 +4,21 @@ const savePlantContextBtn = document.getElementById("saveBtn");
 
 const roomName = document.getElementById("room-name");
 
+console.log();
+
 // Plant POST context api call 
 addApiEvent(savePlantContextBtn, plantContextApiPath,
     function(apiPath) {
         const data = {
             "roomName": `${roomName.value}`,
-            "plantProfiles": []
+            "plantProfiles": [
+                {
+                    "plantProfileName": document.getElementById("plant-name").value,
+                    "plantThreshold": document.getElementById("plant-percentage").value,
+                    "lastHumidificationDate": new Date().toISOString().replace("Z", "+00:00"),
+                    "nextHumidificationDate": new Date().toISOString().replace("Z", "+00:00")
+                }
+            ]
         }
     
         const options = makeOptions('POST', {

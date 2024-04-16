@@ -17,9 +17,7 @@ function getCurrentUser(apiPath) {
             const email = data['email'];
             const atIndex = email.indexOf('@');
             const username = email.substring(0, atIndex);
-            console.log(username);
             const maskedUsername = username.charAt(0) + '*'.repeat(username.length - 2) + username.charAt(username.length - 1);
-            console.log(maskedUsername);
             const maskedEmail = maskedUsername + email.substring(atIndex);
             document.getElementById("email-label").textContent = maskedEmail;
         })
