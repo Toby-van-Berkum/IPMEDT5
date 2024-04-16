@@ -1,5 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
-
+    const addRoomButton = document.getElementById("addRoomBtn");
+    addRoomButton.addEventListener('click', () => {
+        window.location.href = '/add-room.html';
+    })
 });
 
 const plantContextApiPath = 'http://192.168.137.212:8081/happy-plants/v1/plant/context'
