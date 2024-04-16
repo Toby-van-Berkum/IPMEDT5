@@ -3090,10 +3090,6 @@ h5 {
     flex-direction: row;
   }
 
-  .md\:flex-col{
-    flex-direction: column;
-  }
-
   .md\:rounded-br-\[15rem\]{
     border-bottom-right-radius: 15rem;
   }
