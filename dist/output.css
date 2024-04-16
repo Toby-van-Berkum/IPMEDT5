@@ -2328,16 +2328,6 @@ html {
   padding-bottom: 2rem;
 }
 
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .pb-0{
   padding-bottom: 0px;
 }
@@ -3039,24 +3029,6 @@ h5 {
   text-align: center;
 }
 
-.focus\:border-red-500:focus{
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
-.focus\:bg-green:focus{
-  background-color: var(--color-green);
-}
-
-.focus\:text-darkgray:focus{
-  color: var(--color-darkgray);
-}
-
-.focus\:outline-none:focus{
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 .focus\:backdrop-brightness-50:focus{
   --tw-backdrop-brightness: brightness(.5);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -3069,11 +3041,6 @@ h5 {
 
 .hover\:focus\:text-center:focus:hover{
   text-align: center;
-}
-
-.active\:border-red-500:active{
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 @media (min-width: 640px){
