@@ -37,7 +37,9 @@ function addApiEventParams(btn, apiPath, func, object) {
  */
 function addApiEventOnLoad(apiPath, func) {
     if (apiPath === null && func === null) return;
-    window.addEventListener('DOMContentLoaded', func(apiPath))
+    window.addEventListener('DOMContentLoaded', () => {
+        func(apiPath);
+    })
 }
 
 /**

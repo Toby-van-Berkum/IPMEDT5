@@ -71,9 +71,14 @@ function getRoom(apiPath, roomName) {
     });
 };
 
+// Function to create filter buttons dynamically
 function createFilterButtons(data) {
     const roomButtonContainer = document.getElementById("toggle-buttons-container");
-    roomButtonContainer.innerHTML = ''; // Clear existing buttons
+
+    // Clear existing buttons (except the refresh button)
+    roomButtonContainer.querySelectorAll('.filter-button').forEach(button => {
+        button.remove();
+    });
 
     data.forEach(room => {
         const button = document.createElement('button');
@@ -87,6 +92,9 @@ function createFilterButtons(data) {
         });
     });
 }
+
+// Call the function to create filter buttons dynamically
+createFilterButtons([]);
 
 function getPlantContexts(apiPath) {
     const options = makeOptionsWithoutBody('GET', {
@@ -102,6 +110,7 @@ function getPlantContexts(apiPath) {
         })
         .then(data => {
             console.log(data);
+            createFilterButtons(data);
             // Clear existing plant elements
             const plantContainer = document.querySelector('.grid');
             plantContainer.innerHTML = '';
@@ -142,4 +151,3 @@ function getPlantContexts(apiPath) {
 
 addApiEventOnLoad(plantContextApiPath, getPlantContexts);
 addApiEvent(plantContextGetBtn, plantContextApiPath, getPlantContexts);
-createFilterButtons(apiResponseData);
