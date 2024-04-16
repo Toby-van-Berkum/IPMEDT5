@@ -60,7 +60,7 @@
         <h5 class="font-bold">Water geven</h5>
         <section class="grid grid-cols-3 place-items-center justify-items-start">
           <article class="relative">
-            <p class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">50%</p>
+            <p id="threshold" class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">50%</p>
             <svg class="svg-indicator">
               <circle class="svg-indicator-track" />
               <circle class="svg-indicator-indication" />
@@ -71,7 +71,7 @@
             <p>Krijgt rond 23:00 water</p>
             <p class="text-gray">Het waterreservoir is gevuld</p>
           </section>
-          <a href="#" class="btn-primary">Geef nu water</a>
+          <a id="pumpBtn" href="#" class="btn-primary">Geef nu water</a>
         </section>
       </article>
       <article>
@@ -126,14 +126,15 @@
         <h5 class="font-bold">Instellingen</h5>
         <section class="flex flex-row space-x-4 place-items-center">
           <p>Krijgt water wanneer de aarde droger is dan</p>
-          <input class="input-field w-[4rem]" type="number" id="" name="" min="1" max="100" cols="3" rows="1">
+          <input class="input-field w-[4rem]" type="number" id="thresholdInput" name="thresholdInput" min="1" max="100" cols="3" rows="1">
           <p>procent.</p>
-          <button class="btn-secondary">Opslaan</button>
+          <button id="saveBtn" class="btn-secondary">Opslaan</button>
         </section>
-        <button class="mt-4 btn-alert">Verwijderen</button>
+        <button id="delBtn" class="mt-4 btn-alert">Verwijderen</button>
       </article>
     </section>
   </main>
+  <script src="js/lib.js"></script>
   <script src="js/detail-page.js"></script>
 </body>
 

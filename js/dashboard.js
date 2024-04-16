@@ -13,6 +13,8 @@ const plantContextGetBtn = document.getElementById('refreshBtn');
 const roomButtonContainer = document.getElementById("toggle-buttons-container");
 const roomButtons = roomButtonContainer.querySelectorAll(".filter-button");
 
+localStorage.setItem('allRooms',  []);
+
 roomButtons.forEach(function(button) {
     addApiEventParams(button, `${plantContextApiPath}/${button.textContent}`, getRoom, button.textContent);
 });
@@ -86,10 +88,11 @@ function createFilterButtons(data) {
     roomButtonContainer.querySelectorAll('.filter-button').forEach(button => {
         button.remove();
     });
-
+    var rooms = [];
     data.forEach(room => {
         const button = document.createElement('button');
         button.textContent = room.roomName;
+        rooms.push(room.roomName);
         button.classList.add('filter-button', 'px-6', 'py-2', 'mr-1', 'border-2', 'rounded-sm', 'bg-green', 'font-bold', 'text-darkgray', 'hover:bg-darkgray', 'hover:text-green', 'hover:border-gray', 'focus:backdrop-brightness-50');
         roomButtonContainer.appendChild(button);
         // Add event listener or API call for each button here if needed
@@ -98,6 +101,8 @@ function createFilterButtons(data) {
             getRoom(`${plantContextApiPath}/${room.roomName}`, room.roomName);
         });
     });
+
+    localStorage.setItem('allRooms', rooms);
 }
 
 function getPlantContexts(apiPath) {
@@ -161,7 +166,6 @@ function redirectToDetailPage(plantObject, roomName) {
     // Store the plant object and room name in localStorage
     localStorage.setItem('selectedPlant', JSON.stringify(plantObject));
     localStorage.setItem('selectedRoom', roomName);
-    
     // Redirect to the detail page
     window.location.href = '/detail-page.html';
 }
