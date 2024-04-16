@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,8 @@
   <link rel="stylesheet" href="/dist/output.css">
   <link rel="stylesheet" href="/styles/style.css">
 </head>
-
 <body class="flex h-screen text-white bg-black font-inter">
-  <!-- sidebar -->
+  <!-- Sidebar -->
   <aside class="flex-col hidden w-64 bg-darkgray md:flex">
     <article class="flex items-center justify-center h-16">
       <p class="font-bold">Happy <span style="color: var(--color-green);">Plants</span></p>
@@ -18,22 +16,19 @@
     <article class="flex flex-col flex-1 overflow-y-auto">
       <nav class="flex-1 py-4">
         <a href="#" class="flex items-center px-4 py-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           Dashboard
         </a>
         <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
           Instellingen
         </a>
         <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray hover:bg-green hover:text-darkgray">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
           Account
@@ -47,40 +42,30 @@
     <article class="mb-8">
       <h1 class="mb-4 text-4xl font-bold">Jouw <span style="color: var(--color-green);">planten</span></h1>
 
-      <!-- button toggle -->
+      <!-- Button toggle -->
       <section id="toggle-buttons-container" class="flex flex-wrap mb-4">
-        <button
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Woonkamer</button>
-        <button
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Badkamer</button>
-        <button
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Slaapkamer</button>
-        <button
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Voeg kamer toe</button>
-        <button
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">livingRoom</button>
-        <button
-          type="button"
-          id="refreshBtn"
-          class="px-6 py-2 mr-1 border-2 rounded-sm bg-green text-darkgray hover:bg-darkgray hover:text-green hover:border-gray">Refresh</button>
-        </section>
+        <!-- Dynamically loaded filter buttons -->
+        <!-- <button class="filter-button px-6 py-2 mr-1 border-2 rounded-sm bg-green font-bold text-darkgray hover:bg-darkgray hover:text-green hover:border-gray focus:backdrop-brightness-50">Woonkamer</button>
+        <button class="filter-button px-6 py-2 mr-1 border-2 rounded-sm bg-green font-bold text-darkgray hover:bg-darkgray hover:text-green hover:border-gray focus:backdrop-brightness-50">Keuken</button> -->
+        <button type="button" id="refreshBtn" class="px-4 justify-center text-center items-center py-4 mr-1 border-2 rounded-sm bg-green font-bold text-darkgray hover:bg-darkgray hover:text-green hover:border-gray"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"/>
+        </svg>
+        </button>
+      </section>
     </article>
-    <!-- alertbox -->
+    <!-- Alert box -->
     <article class="flex items-center px-6 py-4 text-lg rounded-sm bg-darkgray">
       <svg viewBox="0 0 24 24" class="w-6 h-6 mr-3 text-yellow-600 sm:w-5 sm:h-5">
-        <path fill="var(--color-orange)"
-          d="M23.119,20,13.772,2.15h0a2,2,0,0,0-3.543,0L.881,20a2,2,0,0,0,1.772,2.928H21.347A2,2,0,0,0,23.119,20ZM11,8.423a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Zm1.05,11.51h-.028a1.528,1.528,0,0,1-1.522-1.47,1.476,1.476,0,0,1,1.448-1.53h.028A1.527,1.527,0,0,1,13.5,18.4,1.475,1.475,0,0,1,12.05,19.933Z">
-        </path>
+        <path fill="var(--color-orange)" d="M23.119,20,13.772,2.15h0a2,2,0,0,0-3.543,0L.881,20a2,2,0,0,0,1.772,2.928H21.347A2,2,0,0,0,23.119,20ZM11,8.423a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Zm1.05,11.51h-.028a1.528,1.528,0,0,1-1.522-1.47,1.476,1.476,0,0,1,1.448-1.53h.028A1.527,1.527,0,0,1,13.5,18.4,1.475,1.475,0,0,1,12.05,19.933Z"></path>
       </svg>
       Het waterreservoir van plant 3 is bijna leeg
     </article>
-    <!-- grid -->
-    <article id ="plant-container" class="grid grid-cols-3 gap-4 mt-8">
+    <!-- Grid -->
+    <article id="plant-container" class="grid grid-cols-3 gap-4 mt-8">
       <!-- Dynamically loaded plants -->
     </article>
   </main>
   <script src="js/lib.js"></script>
   <script src="js/dashboard.js"></script>
 </body>
-
 </html>

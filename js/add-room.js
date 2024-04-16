@@ -2,7 +2,7 @@ const plantContextApiPath = 'http://192.168.137.212:8081/happy-plants/v1/plant/c
 
 const savePlantContextBtn = document.getElementById("saveBtn");
 
-const roomName = document.getElementById("plant-name");
+const roomName = document.getElementById("room-name");
 
 // Plant POST context api call 
 addApiEvent(savePlantContextBtn, plantContextApiPath,
